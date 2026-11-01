@@ -427,6 +427,55 @@ body{ min-height:100vh; min-height:100dvh; }
 .g1scene{ margin-bottom:10px; }
 
 .option.sol{ background:#DFF3E3; border-color:#2e8b4d; }
+
+/* ===== RESPONSIF: ponsel, tablet, dan layar kecil ===== */
+img, video, canvas, svg{ max-width:100%; }
+button, input, textarea, select{ max-width:100%; }
+.app, .card, .g1scene, .task-panel, .qblock{ min-width:0; }
+.eq .cell{ flex:0 1 84px; max-width:100%; }
+.eq .cell.wide{ flex-basis:128px; }
+
+@media (min-width:600px) and (max-width:899px){
+  body{ padding:28px 24px 48px; }
+  .app{ max-width:680px; }
+  .card{ padding:28px; }
+  .stage{ margin:-28px -28px 0; }
+  .card.compact{ padding-top:24px; }
+}
+
+@media (max-width:480px){
+  body{ padding:12px 10px 32px; }
+  .app{ max-width:460px; }
+  .card{ padding:18px; border-radius:16px; }
+  .stage{ margin:-18px -18px 0; }
+  .card.compact{ padding-top:16px; }
+  .topbar{ gap:7px; padding:6px 2px; }
+  .topbar .badge{ padding:6px 10px; font-size:12px; }
+  .hud{ padding:3px 8px; font-size:12px; }
+  .g1scene{ padding:12px; }
+  .it{ min-width:0; padding:8px 3px; }
+  .it .em{ font-size:30px; }
+  .g3off{ gap:7px; padding:8px; font-size:26px; }
+  .g3off span{ min-width:0; overflow-wrap:anywhere; }
+  .week{ gap:2px; padding-inline:4px; }
+  .week .day{ font-size:9px; }
+  .nota .mini-table th, .nota .mini-table td{ padding:4px 3px; }
+}
+
+@media (max-width:360px){
+  body{ padding-inline:8px; }
+  .card{ padding:14px; }
+  .stage{ margin:-14px -14px 0; }
+  .dialogue{ margin-right:4px; margin-left:4px; padding-right:10px; }
+  .topbar{ gap:5px; }
+  .topbar .badge{ padding:5px 8px; font-size:11px; }
+  .eq{ gap:5px 4px; }
+  .eq .cell{ flex-basis:72px; }
+  .eq .cell.wide{ flex-basis:108px; }
+  .eq .op{ font-size:14px; }
+  .recap-grid{ gap:6px; }
+  .recap-item{ padding:9px 6px; }
+}
 </style>
 </head>
 <body>
